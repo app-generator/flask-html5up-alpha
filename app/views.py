@@ -142,15 +142,15 @@ def index(path):
     except:
         abort(404)
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'sitemap.xml')
+
 #@app.route('/favicon.ico')
 #def favicon():
 #    return send_from_directory(os.path.join(app.root_path, 'static'),
 #                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
-#@app.route('/sitemap.xml')
-#def sitemap():
-#    return send_from_directory(os.path.join(app.root_path, 'static'),
-#                               'sitemap.xml')
 
 #@app.route('/googlee35aa2f2fd798797985b.html')
 #def google_checker():
