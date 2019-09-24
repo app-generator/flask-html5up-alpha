@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+
+    {% include 'includes/header.html' %}
+
+	<body class="{{ body_class }} is-preload">
+
+		<!-- Wrapper -->
+		<div id="page-wrapper">
+
+			{% include 'includes/navigation.html' %}
+				
+			{{ content | safe }}
+
+			{% include 'includes/footer.html' %}
+
+		</div>
+
+		<!-- Scripts -->
+        {% include 'includes/scripts.html' %}
+
+	</body>
+</html>
